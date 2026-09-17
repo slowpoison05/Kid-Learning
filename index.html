@@ -6,82 +6,17 @@
 <meta name="theme-color" content="#6c5ce7">
 <meta name="description" content="Little India Learning: a fun English and Hindi learning playground for kids.">
 <title>Little India Learning 🌈</title>
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
-<main class="app">
-<section id="languageHome" class="language-home">
-  <div class="home-stars">⭐ ✨ 🌈 ✨ ⭐</div>
-  <div class="home-icon">🧒📚</div>
-  <p class="eyebrow">PLAY • LEARN • GROW</p>
-  <h1>Little India Learning</h1>
-  <p class="home-subtitle">A fun learning playground for little minds 🇮🇳</p>
-  <div class="language-buttons">
-    <button id="englishButton" class="language-button english" type="button" onclick="window.showLearning('english')">
-      <span>🇬🇧</span><strong>English</strong><small>ABC • Numbers • Nature • More</small>
-    </button>
-    <button id="hindiButton" class="language-button hindi" type="button" onclick="window.showLearning('hindi')">
-      <span>🇮🇳</span><strong>हिंदी</strong><small>अ से ज्ञ • गिनती • प्रकृति • और भी</small>
-    </button>
-  </div>
-  <div class="home-features"><span>🔊 Listen</span><span>👆 Swipe</span><span>🎯 Quiz</span><span>📱 Kid-friendly</span></div>
-</section>
-
-<section id="learningHome" hidden>
-<header class="topbar">
-  <div><p class="eyebrow">PLAY • LEARN • GROW</p><h1 id="pageTitle">English Learning 🇬🇧</h1></div>
-  <div class="top-actions">
-    <button id="homeButton" class="home-button" type="button" aria-label="Back to language selection" onclick="window.showLanguageHome()">⌂</button>
-    <button id="soundToggle" class="icon-button" type="button" aria-label="Turn sound off" aria-pressed="true">🔊</button>
-  </div>
-</header>
-<div id="categoryBar" class="category-bar" aria-label="Learning sections"></div>
-<section class="progress-wrap">
-  <div class="progress-text"><span id="progressLetter">A</span><span id="progressCount">1 / 26</span></div>
-  <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
-  <nav id="letterNav" class="letter-nav" aria-label="Choose a lesson"></nav>
-</section>
-<section id="card" class="learning-card" tabindex="0" aria-live="polite">
-  <div id="sparkles" class="sparkles">✦　✧　✦</div>
-  <div id="letter" class="big-letter">A</div>
-  <div id="visual" class="visual">🍎</div>
-  <h2 id="phrase">A for Apple</h2>
-  <p id="hint">Tap listen and say it with me!</p>
-  <div id="poemScene" class="poem-scene" hidden></div>
-  <div id="poemLines" class="poem-lines" hidden></div>
-  <div id="quizBox" class="quiz-box" hidden></div>
-  <button id="listenButton" class="listen-button" type="button"><span>🔊</span> Listen</button>
-</section>
-<div class="swipe-hint">← Swipe to learn →</div>
-<div class="controls"><button id="prevButton" class="control-button" type="button">← <span>Previous</span></button><button id="nextButton" class="control-button next" type="button"><span>Next</span> →</button></div>
-<label class="autoplay"><input id="autoPlay" type="checkbox"><span class="switch"></span><span id="autoPlayLabel">Auto-play lessons</span></label>
-<footer>Made with ❤️ for little learners in India 🇮🇳</footer>
-</section>
-</main>
-
-<script>
-(function(){
-  window.showLearning=function(language){
-    var home=document.getElementById('languageHome');
-    var learning=document.getElementById('learningHome');
-    var title=document.getElementById('pageTitle');
-    if(!home||!learning)return;
-    home.hidden=true;
-    learning.hidden=false;
-    document.documentElement.lang=language==='hindi'?'hi':'en';
-    if(title)title.textContent=language==='hindi'?'हिंदी सीखें 🇮🇳':'English Learning 🇬🇧';
-    try{sessionStorage.setItem('kidLearningLanguage',language);}catch(e){}
-    window.dispatchEvent(new CustomEvent('kidLearningLanguage',{detail:language}));
-  };
-  window.showLanguageHome=function(){
-    var home=document.getElementById('languageHome');
-    var learning=document.getElementById('learningHome');
-    if(home)home.hidden=false;
-    if(learning)learning.hidden=true;
-    document.documentElement.lang='en';
-  };
-})();
-</script>
-<script src="script.js?v=4"></script>
-</body>
-</html>
+<main class="app"><section class="language-home">
+<div class="home-stars">⭐ ✨ 🌈 ✨ ⭐</div><div class="home-icon">🧒📚</div>
+<p class="eyebrow">PLAY • LEARN • GROW</p><h1>Little India Learning</h1>
+<p class="home-subtitle">A fun learning playground for little minds 🇮🇳</p>
+<div class="language-buttons">
+<a class="language-button english" href="english.html"><span>🇬🇧</span><strong>English</strong><small>ABC • Numbers • Nature • More</small></a>
+<a class="language-button hindi" href="hindi.html"><span>🇮🇳</span><strong>हिंदी</strong><small>अ से ज्ञ • गिनती • प्रकृति • और भी</small></a>
+</div>
+<div class="home-features"><span>🔊 Listen</span><span>👆 Swipe</span><span>🎯 Quiz</span><span>📱 Kid-friendly</span></div>
+</section></main>
+</body></html>
