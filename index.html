@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#6c5ce7">
+  <meta name="description" content="A fun, interactive A to Z alphabet learning app for kids.">
+  <title>Kids ABC Learning</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app" aria-label="Kids ABC Learning">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">LET'S LEARN</p>
+        <h1>Kids ABC 🌈</h1>
+      </div>
+      <button id="soundToggle" class="icon-button" type="button" aria-label="Turn sound off" aria-pressed="true">🔊</button>
+    </header>
+
+    <section class="progress-wrap" aria-label="Alphabet progress">
+      <div class="progress-text"><span id="progressLetter">A</span><span id="progressCount">1 / 26</span></div>
+      <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+      <nav id="letterNav" class="letter-nav" aria-label="Choose a letter"></nav>
+    </section>
+
+    <section id="card" class="learning-card" tabindex="0" aria-live="polite">
+      <div id="sparkles" class="sparkles" aria-hidden="true">✦　✧　✦</div>
+      <div id="letter" class="big-letter">A</div>
+      <div id="visual" class="visual" aria-hidden="true">🍎</div>
+      <h2 id="phrase">A for Apple</h2>
+      <p id="hint">Tap listen and say it with me!</p>
+      <button id="listenButton" class="listen-button" type="button"><span>🔊</span> Listen</button>
+    </section>
+
+    <div class="swipe-hint" aria-hidden="true"><span>←</span> Swipe to learn <span>→</span></div>
+
+    <div class="controls">
+      <button id="prevButton" class="control-button" type="button" aria-label="Previous letter">← <span>Previous</span></button>
+      <button id="nextButton" class="control-button next" type="button" aria-label="Next letter"><span>Next</span> →</button>
+    </div>
+
+    <label class="autoplay">
+      <input id="autoPlay" type="checkbox">
+      <span class="switch" aria-hidden="true"></span>
+      <span>Auto-play letters</span>
+    </label>
+
+    <footer>Made for little learners 💛</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
